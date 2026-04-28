@@ -1,199 +1,159 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Project 2 Report</title>
-        <style>
-            :root {
-                --color-neutral-95: hsl(220 10% 95%);
-                --color-neutral-90: hsl(220 10% 90%);
-                --color-neutral-80: hsl(220 10% 80%);
-                --color-neutral-70: hsl(220 10% 70%);
-                --color-neutral-60: hsl(220 10% 60%);
-                --color-neutral-50: hsl(220 10% 50%);
-                --color-neutral-40: hsl(220 10% 40%);
-                --color-neutral-30: hsl(220 10% 30%);
-                --color-neutral-20: hsl(220 10% 20%);
-                --color-neutral-10: hsl(220 10% 10%);
-            }
+<head>
+    <title>Project 2 Report</title>
+    <style>
+        :root {
+            --color-neutral-95: hsl(220 10% 95%);
+            --color-neutral-90: hsl(220 10% 90%);
+            --color-neutral-80: hsl(220 10% 80%);
+            --color-neutral-40: hsl(220 10% 40%);
+            --color-neutral-30: hsl(220 10% 30%);
+            --color-neutral-20: hsl(220 10% 20%);
+        }
 
-            html {
-                font: 100%/1.5 system-ui;
-                counter-reset: figure;
-                background: var(--color-neutral-95);
-                max-width: min(75vw, 80em);
-                margin: 0 auto;
-            }
+        html {
+            font: 100%/1.5 system-ui;
+            counter-reset: figure;
+            background: var(--color-neutral-95);
+            max-width: min(75vw, 80em);
+            margin: 0 auto;
+        }
 
-            /* Headings */
+        h1 {
+            text-align: center;
+            font-size: clamp(2.5em, 150% + 2vh + 2vw, 10vmin);
+            font-weight: 800;
+            margin: 1em 0 0.5em;
+        }
 
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6 {
-                line-height: 1.1;
-                font-weight: 600;
-                text-wrap: balance;
-            }
+        h2 {
+            font-size: 180%;
+            color: var(--color-neutral-30);
+            border-bottom: 1px solid var(--color-neutral-80);
+            padding-bottom: 0.2em;
+        }
 
-            h1,
-            h2 {
-                border-bottom: 1px solid var(--color-neutral-80);
-                padding-bottom: 0.2em;
-            }
+        h3 {
+            font-size: 130%;
+        }
 
-            h1 {
-                margin-block: 1em 0.5rem;
-                font-size: clamp(2.5em, 150% + 2vh + 2vw, 10vmin);
-                font-weight: 800;
+        header {
+            text-align: center;
+            padding: 1em 0;
+        }
 
-                small {
-                    display: block;
-                    width: fit-content;
-                    padding: 0.2em 0.5em;
-                    margin-inline: auto;
-                    color: white;
-                    background: var(--color-neutral-40);
-                    font-size: 40%;
-                    text-transform: uppercase;
-                    white-space: nowrap;
-                }
-            }
+        main {
+            background: white;
+            color: var(--color-neutral-20);
+            border-radius: 1rem;
+            padding: 1rem 2rem;
+        }
 
-            h2 {
-                font-size: 180%;
-                color: var(--color-neutral-30);
-            }
+        figure {
+            margin: 1.5em 0;
+            padding: 0.5rem;
+            border: 1px solid var(--color-neutral-80);
+            box-shadow: 0 0.1em 0.2em var(--color-neutral-95);
+            text-align: center;
+            background: white;
+        }
 
-            h3 {
-                font-size: 130%;
-            }
+        .figure-large img {
+            width: 80%;
+            max-width: 850px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
 
-            /* Lists */
+        figure img {
+            max-width: 100%;
+        }
 
-            ul,
-            ol {
-                padding-inline-start: 2em;
-            }
+        figcaption {
+            font: 500 80% system-ui;
+            background: var(--color-neutral-95);
+            padding: 0.6rem;
+            margin-top: 0.5rem;
+            text-align: left;
+        }
 
-            li {
-                &::marker {
-                    color: var(--color-neutral-40);
-                }
+        figcaption::before {
+            content: "Figure " counter(figure) ": ";
+            counter-increment: figure;
+            font-weight: bold;
+            color: var(--color-neutral-40);
+        }
 
-                + li {
-                    margin-top: 0.2em;
-                }
-            }
+        ul {
+            padding-left: 1.5em;
+        }
+    </style>
+</head>
 
-            /* Sectioning elements */
+<body>
 
-            header {
-                padding-block: 1em;
-                text-align: center;
-            }
+<header>
+    <h1>Persuasive or Deceptive Visualization?</h1>
+    <p><strong>Your Name</strong> — <em>Your UCSD Email Address</em></p>
+</header>
 
-            main {
-                background: white;
-                color: var(--color-neutral-20);
-                border-radius: 1rem;
-                padding: 0.1rem 2rem;
-            }
+<main>
 
-            /* Figures */
+<h2>Proposition: CO₂ emissions are still a serious global problem</h2>
 
-            figure {
-                margin: 1em 0;
-                padding: 0.5rem;
-                margin-inline: -0.5em;
-                border: 1px solid var(--color-neutral-80);
-                box-shadow: 0 0.1em 0.2em var(--color-neutral-95);
-                text-align: center;
-                background: white;
+<section>
+    <h3>FOR the Proposition</h3>
 
-                > figcaption {
-                    font: 500 75% var(--font-sans);
-                    background: var(--color-neutral-95);
-                    padding: 0.5rem;
-                    margin: -0.5rem;
-                    margin-top: 0.5rem;
-                    counter-increment: figure;
-                    text-align: left;
+    <figure class="figure-large">
+        <img src="project2final1.png" alt="Global CO2 emissions trend">
+        <figcaption>
+            Global CO₂ emissions increased from 19,321 MtCO₂e in 1995 to over 30,000 MtCO₂e by 2016, showing a strong upward trend.
+        </figcaption>
+    </figure>
 
-                    &::before {
-                        content: "Figure " counter(figure) ": ";
-                        font-weight: bold;
-                        color: var(--color-neutral-40);
-                    }
+    <p>Design Decisions and Rationale:</p>
+    <ul>
+        <li>I used a line chart to clearly show the upward trend over time.</li>
+        <li>I limited the data to 1995–2016 to emphasize consistent growth.</li>
+        <li>I added annotations and a strong title to guide the viewer’s interpretation.</li>
+    </ul>
+</section>
 
-                    a:not(:hover, :focus, :active) {
-                        color: inherit;
-                        text-decoration: underline;
-                        text-decoration-color: color-mix(
-                            in lab,
-                            currentColor,
-                            transparent 70%
-                        );
-                    }
-                }
-            }
-        </style>
-    </head>
+<section>
+    <h3>AGAINST the Proposition</h3>
 
-    <body>
-        <header>
-            <h1>
-                <small>Project 2</small>
-                Persuasive or Deceptive Visualization?
-            </h1>
+    <figure>
+        <img src="project2final2.png" alt="CO2 emissions trend">
+        <figcaption>
+            BRIEF CAPTION HERE.
+        </figcaption>
+    </figure>
 
-            <p><strong>Your Name</strong> — <em>Your UCSD Email Address</em></p>
-        </header>
+    <p>Design Decisions and Rationale:</p>
+    <ul>
+        <li>RATIONALE_1</li>
+        <li>RATIONALE_2</li>
+        <li>RATIONALE_3</li>
+    </ul>
+</section>
 
-        <main>
-            <h2>Proposition: [STATE PROPOSITION]</h2>
+<section>
+    <h2>Final Reflection</h2>
+    <p>
+        The two groups of visualizations provide two differing arguments despite coming from the same dataset.
+        Side A argues that CO2 emissions are seeing a rapid growth, while Side B argues that emissions are actually relatively stable and proportionate to economic development. 
+        These differing visualizations which could urge a reader to think a certain way were intentionally modified with deceptive techniques to push a certain narrative. For Side A, the years included spanned 1995-present, allowing to see a greater pattern of increasing emissions over time. 
+        The y-axis is also stretched to include both extreme datapoints from 1995 & present to make the slope look almost linearly increasing. For Side B, a more limited range of years is presented, 
+        resulting in a much smaller y-axis range. Because of this, the reader can notice a plateau around 2013-2016, which in this visualization, takes up a significant section of the timeline.
+        For this side in particular, China was notably removed from the reported countries, as it had the highest slope in the Side A visualizations. 
+        The change in wording in the plot titles is also significant - Side A aims to report the highest emitters, while Side B is more selective and reports the emissions of “Several” major economies. Including the United States also “clamps” the slopes of the other emitters and makes slope increases of other countries less visible - fitting for Side B. 
+        Since we’re aware of the realities of climate change, it would be interesting to take Side B for this assignment to challenge ourselves to create a visualization arguing against our own beliefs.
+    </p>
+</section>
 
-            <section>
-                <h3>FOR the Proposition</h3>
+</main>
 
-                <figure>
-                    <img src="IMAGE_FILENAME" alt="" />
-                    <figcaption>BRIEF CAPTION HERE.</figcaption>
-                </figure>
-
-                <p>Design Decisions and Rationale:</p>
-
-                <ul>
-                    <li>RATIONALE_1</li>
-                    <li>RATIONALE_2</li>
-                    <li>RATIONALE_3</li>
-                </ul>
-            </section>
-
-            <section>
-                <h3>AGAINST the Proposition</h3>
-
-                <figure>
-                    <img src="IMAGE_FILENAME" alt="" />
-                    <figcaption>BRIEF CAPTION HERE.</figcaption>
-                </figure>
-
-                <p>Design Decisions and Rationale:</p>
-
-                <ul>
-                    <li>RATIONALE_1</li>
-                    <li>RATIONALE_2</li>
-                    <li>RATIONALE_3</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Final Reflection</h2>
-
-                <p>[WRITE FINAL REFLECTION PARAGRAPHS HERE.]</p>
-            </section>
-        </main>
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"c822b88e119346678db149ed7b7721c9","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
